@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Team Profile</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #001f3f; /* Dark navy blue */
+      padding: 50px 0;
+      color: white;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+    h1, h2 {
+      color: white;
+    }
+    .text-muted {
+      color: #dcdcdc !important;
+    }
+    .image-container {
+      position: relative;
+      width: 600px;
+      height: 603px; /* Maintain aspect ratio of 4273/4259 ≈ 1.003 */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      margin: 0 auto; /* center horizontally */
+    }
+    .image-container:hover {
+      transform: scale(1.03);
+    }
+    img.background-image {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      pointer-events: none; /* so clicks go to SVG */
+      user-select: none;
+    }
+    svg.overlay-svg {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+    }
+    /* Navbar improvements */
+    .navbar {
+      background-color: #002855;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+      padding: 0.75rem 1.5rem;
+      margin-bottom: 50px;
+    }
+    .navbar-brand {
+      font-weight: 600;
+      font-size: 1.5rem;
+      color: #ffd500;
+      transition: color 0.3s;
+    }
+    .navbar-brand:hover {
+      color: #ffec59;
+      text-decoration: none;
+    }
+    .nav-link {
+      color: #dcdcdc !important;
+      font-weight: 500;
+      transition: color 0.3s, border-bottom 0.3s;
+      padding: 0.5rem 1rem;
+      position: relative;
+    }
+    .nav-link:hover, .nav-link:focus {
+      color: #ffd500 !important;
+      text-decoration: none;
+    }
+    .nav-link.active::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 3px;
+      width: 100%;
+      background-color: #ffd500;
+      border-radius: 2px 2px 0 0;
+    }
+    /* Responsive toggler */
+    .navbar-toggler {
+      border-color: #ffd500;
+    }
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23ffd500' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+  </style>
+</head>
+<body>
+  <div class="container text-center mb-4">
+    <h1><a href="index.html" style="color: white; text-decoration: none;">Anji Inaashkawun</a></h1>
+    <h2 class="text-muted">Waves of Change</h2>
+  </div>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container justify-content-center">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="our_story.html">Our story</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="our_team.html">Our team</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="our_work.html">Our work</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact_us.html">Contact us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container text-center">
+    <p style="color: white; margin-bottom: 15px; font-size: 0.9rem;">Click any symbol to learn more</p>
+    <div class="image-container" style="position: relative; width: 600px; height: auto; margin: 0 auto;">
+      <img src="output.jpg" alt="Background" style="width: 100%; height: auto; display: block; pointer-events: none;" />
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1363 1367" 
+           style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; cursor: pointer;">
+           <defs>
+            <filter id="soften-edges">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" />
+            </filter>
+          </defs>          
+          <!--Four women path-->
+        <path id="four-women" d="m 1053.7659,492.67665 -0.8839,19.44543 -10.0763,5.48008 -16.617,9.72272 -20.8596,11.66726 -12.19763,7.6014 -1.76777,2.65165 -1.06066,3.71231 0.88389,18.03122 0.53033,15.2028 0.35355,13.43503 2.2981,14.31891 1.94454,12.19759 6.18715,19.09189 2.8285,10.07627 -63.10932,-1.76777
+        v -3.18198
+        l 17.32412,-25.27907 4.24264,-1.06066 2.12132,-1.41421 6.0546,-5.78944 1.32583,-3.0494 4.59619,-2.12132 7.33624,-7.513 -1.01647,-5.61267 -0.66291,-3.49133 -2.65165,-4.19845 -2.74004,-3.71231 -1.94455,-0.83969 -1.41421,-0.13258 0.17678,-3.31457 -5.3033,-6.31976 -3.62393,-1.10486 -4.46361,0.13258 -2.03293,1.45841
+        h -1.19324
+        l -3.53554,-2.60745 -3.18198,-0.44195 -4.15425,1.32583 -6.91639,6.22444 -2.3125,3.1875 -0.375,3.625 0.0625,2.375 1.625,5.4375 -2.75,4.625 -3.4375,4.75 -0.25,7.0625 2.125,4.375 4.5,2.375 3.375,0.5 5,-0.125 2.0625,3.0625 4.3125,0.9375 0.62448,0.22375 4.42239,1.16687 -17.32156,25.26677 0.0247,3.17073 -104.68202,-0.50251 -111.36932,0.35355 -0.79549,-1.94454 0.13258,-11.62307 -0.61872,-2.87262 -1.45841,-1.63518 -1.85615,0.83969 -4.06587,2.69584 -3.22617,2.20971 -0.62293,-0.34899
+        c 0,0 -1.4375,-6.4375 -1.4375,-6.6875 0,-0.25 -2.125,-18.5 -2.125,-18.5
+        l -16.375,12.75 -10.375,-15.375 -2.69634,0.8053 -7.77817,16.61701 -0.88388,1.23743 -10.25305,-10.16466 -3.8007,-1.76776 -2.71286,3.83518 -2,14.75 -0.5625,5.1875 -7.0625,-2.4375 -1.98105,-1.44781 -0.35356,9.104 -2.20971,2.74004 -2.65165,1.59099 -20.85965,0.7955
+        L 438.75,655
+        l -92,0.75 1.375,-10.8125 12.1875,-3.125 6.5625,1.1875 8.25,10.25 0.125,0.875 8.5,-0.5 -11,-12.25 8.75,-6.875 15.375,-10.75 9.375,-9 5.6875,-11.8125 1.8125,-7.125
+        L 413.5,585
+        l -3.875,-17.25 -2.125,-3.375 -10.875,5 -13.75,9.25 -11,13.25 -5.625,13.5 -3.625,14.25 -4.25,3.625 -3.0625,-7.3125 -0.6875,2.9375 2.48602,4.08607 0.46404,0.33146 0.7955,-0.0663 4.28683,-3.62392 -0.92808,0.24306 -4.47931,-15.03288 -3.16628,-12.4338 0.61872,-12.72792 -5.48008,-0.7071 -3.09359,-4.68459 0.17678,-2.65165 10.16466,-1.59099 22.89258,-7.15945 11.04854,-7.15946 6.0988,-9.01561 5.74524,-21.12482 0.17678,-7.24784 -1.67938,-3.35876 -7.33624,0.97227 -8.52947,1.90035 -17.89864,8.83884 -5.48008,4.37522 1.5026,-11.04854 -0.53033,-0.70711 -15.55635,4.5962
+        c 0,0 -0.7071,-0.26517 -0.7071,-0.70711 0,-0.44194 4.33103,-6.62913 4.33103,-6.62913
+        l 3.0052,-21.56675 -3.35876,-15.55635 -20.68287,-25.19068 -1.14905,0.79549 -7.42462,21.92031 -2.38649,27.40039 1.94455,20.94804 -2.91682,0.97227 -24.74873,-3.62392 -11.84404,-2.74004 -16.61701,-9.19239 -12.99309,-13.70019 -1.59099,-10.07627 7.07107,1.85615 13.43503,8.66206 15.73312,5.48008 14.93763,2.38648 14.58408,-0.53033 3.0161,-0.5671 2.34375,-27.3125 7.46875,-21.875 1.125,-0.8125 12.84375,15.65625 7.8125,9.46875 2.59375,12.03125
+        c 0,0 2.25,-1 2.5,-1.0625 0.25,-0.0625 11.375,-9.75 11.375,-9.75
+        L 380,473.625
+        l 8.375,-4.75 1.32922,-1.03548 -1.67937,-17.23572
+        c 0,0 -3.53554,-2.74004 -3.88909,-2.91682 -0.35356,-0.17678 -12.99309,-2.2981 -12.99309,-2.2981
+        l -0.70711,-20.59448 -15.82151,-2.56326 -0.70711,-0.70711 1.67938,-9.104 5.65686,-12.63953 11.04854,-16.35185 8.3085,-9.36916 7.07107,-5.39169 13.08148,-3.71231
+        h 7.07107
+        l 12.81631,9.8111 5.3033,9.01561 3.0052,8.22012 -1.32583,11.13693 -3.35875,15.55635 -0.44194,11.84404 0.99037,6.77286 2.25,9.8125 4.125,13.5 3.3125,8.5 -9.75,2.1875 -11.375,-29.4375 -0.8125,2.5625 -0.625,10.125 1.625,11.1875 3.5,10 8.3125,7.5 2.25,-0.0625 0.4375,-2.125 -3.3125,-9.75781 9.75,-2.17969 4.6875,17.0625
+        L 445.5,515
+        l 6,58 6.75,79.25 0.13197,1.73538 38.36054,-0.44194 11.75565,-0.17678 6.0988,-29.96365 13.25825,-88.47673 20.77126,-0.7955 15.99829,25.10229 6.80591,3.35876 4.15425,-0.44194 7.77817,-5.65685 17.41251,-17.76606 9.19239,-14.76086 3.35875,-10.07627 -2.91681,-6.62912 -7.68979,-5.12653 -27.48877,-3.8007 -19.18028,2.91682 -12.72792,6.09879 -2.82843,3.62393 0.35356,6.36396 0.44194,3.09359 7.32695,13.70222 -20.76563,0.79297 -4.22656,-9.23828 -6.19961,-20.19454 -2.2981,-14.58408 2.82843,-26.5165 6.36396,-20.15255 5.83363,-13.6118 15.02602,-13.78858 15.20279,-7.07107 9.54594,-2.47488 11.66727,-0.53033 -4.24264,-16.08667
+        h -13.61181
+        l -5.21491,-27.312 -14.58408,-0.88389 2.2981,-12.19759 13.16986,-26.5165 10.51821,-13.78859 13.34664,-6.98267 15.11441,-0.53034 10.42983,1.85616 18.208,15.64474 10.69499,15.55635 12.52807,20.60283 8.625,19.75
+        L 661,386
+        l -0.5,6 -2,1.75 -1.75,-0.375 -3.375,-3 -6.4375,0.75 -2.25,2.5625 -0.0625,4.875 0.875,2.3125 1.85626,8.80499 9.54594,18.03122 6.98268,11.57888 6.27557,17.05895 4.86136,15.64474 2.65165,11.22532 1.5026,13.70019 -1.06066,0.44194 -7.77817,-7.33623 -1.5026,0.17677 -1.06067,5.48008 2.2981,10.42983 2.12132,11.22532 2.03293,16.79378 1.23744,15.99829 3.27037,13.78859 2.91682,11.75565 0.59906,0.20169
+        h 0.8125
+        l 1.25,-3.5 7.0625,-26 7.125,-24.625 1.875,-10.4375 0.75,-10 -0.4375,-10.75 -3.125,-0.375 -6.4375,5.5625 -1.4375,-6.3125 4.1875,-17.5625 9.5,-20.5625 6.1875,-10.125
+        L 723.5,417
+        l 1.125,-9.875 -8.5,-13.375 -13,2.125
+        L 715.5,363
+        l 17,-37.25 14.875,-21.75 21.875,-10.375 18.25,1.625 22.25,18.125 5.625,6.25 6.75,15.75 2.125,19 -18,10.5 -1.75,8.875 -1.5,18.25 -16.5,3.25 -3,19.25 0.625,2.375 13.875,5.875 10.125,3.75 18.57121,5.36547 -2.12132,7.15945 -0.35355,5.48008 2.91682,15.2028 -6.62913,3.80069 0.97227,2.82843 3.27037,11.13693 8.83883,-4.86136 16.08668,-7.07106 1.41422,0.7071 0.35355,5.48008 -10.6066,12.9047 -14.93763,11.22532 -2.38649,3.88909 0.44194,10.25304
+        L 823,519.75
+        V 531
+        l 4.75,28.5 5,32 3.75,59.75 0.007,1.056
+        h 43.75223
+        l 8.13173,-11.49048 11.04854,-22.98097 0.17678,-8.30851 -3.35876,-6.18718 -3.44714,-0.26517 -3.97748,5.92202 -0.17677,-4.41941 4.41941,-16.7054 10.87177,-24.66035 6.0988,-19.44544 -0.35356,-9.45755 -3.09359,-4.15425 -3.31456,-0.13258 -0.22097,-0.61872 4.19844,-3.88909 7.51301,-6.62913 5.61266,-8.13172 4.81717,-7.95496 6.89429,-13.43502 11.79984,-31.42206 2.91682,-10.34144
+        c 0,0 5.83363,-6.71751 6.09879,-7.15945 0.26517,-0.44195 9.81111,-7.77818 9.81111,-7.77818
+        l 10.69499,-2.74004 7.24784,3.18198 8.57367,6.98268 6.01041,7.15946 6.27563,14.4073 2.74,8.92722 -2.5633,2.38649 -10.34142,5.56846 -0.53033,14.67247 -11.57887,6.27557 -1.76777,1.94455 -0.26516,9.10399 10.87177,2.82843 15.64478,1.76777 7.3362,-0.70711 17.5893,-6.54074 16.1751,-9.45755 6.9826,-5.56846
+        z" 
+           fill="rgba(255, 255, 0, 0.4)"
+           style="opacity: 0; pointer-events: auto; transition: opacity 0.4s;"
+           onmouseover="this.style.opacity='1'"
+           onmouseout="this.style.opacity='0'"
+           stroke="none"
+           filter="url(#soften-edges)"
+           style="cursor: pointer; transition: fill-opacity 0.4s ease;" 
+           onclick="toggleInfoBox('info-box4')" />
+           <!--Sun path-->
+        <path id="sun" d="m 637.63624,68.833088 8.83668,-6.511238 10.23194,-3.255619 23.71951,-2.325442
+        h 13.95266
+        l 20.46389,5.581061 13.95265,7.906503 15.81301,9.301769 8.83668,10.231945 6.04615,6.976327 6.04615,18.138446 3.25562,19.06863 -0.93018,13.95265 -3.25562,15.34792 -6.04615,11.16212 -12.55739,18.60354 -14.41774,11.62721 -16.27809,10.23195 -19.53372,6.04614
+        h -18.13845
+        l -19.9988,-4.65088 -11.16212,-4.1858 -11.62721,-5.11597 -12.55739,-11.62721 -10.69703,-11.62721 -7.90651,-19.53371 -2.79053,-23.71951 4.65089,-23.71951 5.11597,-14.41775 8.83668,-15.347913 13.02248,-13.952653
+        z" 
+           fill="rgba(255, 255, 0, 0.4)"
+           style="opacity: 0; pointer-events: auto; transition: opacity 0.3s;"
+           onmouseover="this.style.opacity='1'"
+           onmouseout="this.style.opacity='0'"
+           stroke="none"
+           filter="url(#soften-edges)" 
+           style="cursor: pointer; transition: fill-opacity 0.3s ease;" 
+           onclick="toggleInfoBox('info-box3')" />
+           <!-- Strawberry area -->
+        <path id="strawberry" d="m 679.76847,805.39573 6.57734,1.31547 7.56395,-3.94641 10.85261,-17.10109 7.89282,-19.73203 3.28867,-1.31547 8.55055,6.57735 9.86601,5.9196 10.85262,4.60414 3.28867,-15.12789
+        h 24.33617
+        l -0.9866,-7.89281 24.66504,-3.61754 4.60414,-1.64433 -4.27527,-7.89282 -6.90622,-5.9196 4.93301,-2.63094 6.24848,-2.63094
+        c 0,0 -0.65774,-6.24848 -1.9732,-6.90621 -1.31547,-0.65773 -9.20829,-3.94641 -10.52375,-4.27527 -1.31547,-0.32887 0.32886,-8.87942 0.32886,-8.87942
+        l 5.59075,-6.57734 -1.97321,-3.61754 -17.75883,-0.65773
+        h -7.89281
+        l 2.95981,-8.87942 -1.97321,-1.64433 -22.69183,2.9598 1.64433,-5.91961 1.64434,-3.94641 -11.18148,-0.9866 -4.60415,1.31547 -3.61753,-1.31547 5.59074,-11.18148 -6.90621,-1.31547 -3.61754,0.32887 -1.31547,-2.30207 0.32887,-29.59805 -0.65774,-1.64434 -10.19488,5.26188 -3.94641,-23.67844 -14.79902,9.20828 -11.51035,-15.78562 -8.87942,19.73203 -13.48355,-12.49695 -5.59074,22.0341 -8.55055,-3.28867 -2.9598,10.52375 0.65773,13.15468 5.59074,10.19489 -11.83922,1.64433 1.31547,11.83922 -11.83922,-2.30207 -5.9196,7.89281 -3.28868,1.64434 -20.06089,-11.18149
+        h -7.23508
+        l -1.31547,13.48356 -2.30207,2.30207 -21.37637,-1.9732 0.65774,23.0207 -17.42997,3.61754 18.0877,22.69183 0.32887,6.24848 -3.28867,4.60414 25.65164,8.55055 -5.59075,8.87941 -0.65773,1.64434
+        v 1.9732
+        l 24.33617,-0.65773
+        v 5.91961
+        l 6.57734,0.65773 11.51036,-4.27527 16.77222,-19.73203 5.26188,13.48355 4.933,9.20828 14.14129,12.82582
+        z" 
+        fill="rgba(255, 255, 0, 0.4)" 
+        style="opacity: 0; pointer-events: auto; transition: opacity 0.3s;"
+        onmouseover="this.style.opacity='1'"
+        onmouseout="this.style.opacity='0'"
+        stroke="none"
+        filter="url(#soften-edges)"
+        style="cursor: pointer; transition: fill-opacity 0.3s ease;" 
+        onclick="toggleInfoBox('info-box2')" />
+           <!-- Underwater life path -->
+        <path
+          d="m 1362.0115,661.58829 1.6278,664.84391
+             h -329.2826
+             l -0.9302,39.0674 -664.14629,-0.9301
+             L 0,1365.4996
+             V 832.50829 653.44925
+             l 15.231646,7.32514 24.184599,7.9065 23.71951,7.0926 31.160924,9.76686 3.488164,0.58136 11.976027,3.48816 12.55739,1.86036 10.92958,0.23254 17.32454,-0.23254 11.39467,-1.74409 13.48756,-3.02307 13.25502,-3.25562 11.2784,-5.34852
+             h 1.86035
+             l -1.74408,9.88313 -0.93018,13.02248 0.69763,6.86005 -0.23254,8.83668 2.32544,14.53402 2.32544,10.34821 3.72071,11.04585 6.86006,13.60384 7.20887,9.9994 12.67366,14.9991 7.09259,6.51124 7.90651,6.62751 10.11567,6.16242 18.83608,11.51094 14.30147,4.06953 17.20827,4.30206 34.06773,6.86006 12.67366,1.27899 19.76626,1.16272 57.55469,2.55799 38.83489,0.23254 28.25412,0.69764 27.67276,-2.44172 13.25502,-1.27899 41.62542,1.16272 32.905,0.93018 23.83578,-0.11628 51.62482,-0.69763 45.34612,-0.23254 18.02218,0.11627 63.60084,-0.93018 48.60174,0.34882 24.76596,0.23254 69.87954,-3.37189 51.15969,-2.67426 29.0681,-5.46479 21.7428,-3.13934 8.7205,-3.37189 16.5106,-8.48787 16.5106,-10.11567 10.6971,-9.30177 9.0692,-11.62721 7.4414,-13.02248 11.8598,-24.9985 6.3949,-15.23165 3.7207,-6.97632 1.7441,-8.83668 1.0465,-9.9994 -0.3489,-10.34822 -1.2789,-8.83668 6.2787,1.62781 7.5576,1.97662 19.9988,3.48817 16.3944,2.32544 21.1615,3.02307 15.9293,-0.69763 23.3707,-4.06952 10.4645,-4.9997 26.7426,-8.83668 20.2313,-6.04615 21.5104,-6.97633 8.3716,-3.37189 4.7671,-0.8139
+             z"
+          fill="rgba(255, 255, 0, 0.4)"
+          stroke="none"
+          filter="url(#soften-edges)"
+          style="opacity: 0; pointer-events: auto; transition: opacity 0.3s;"
+          onmouseover="this.style.opacity='1'"
+          onmouseout="this.style.opacity='0'"
+          onclick="toggleInfoBox('info-box')"
+          id="underwater-life-path"
+        />
+        
+        <!-- Artist's name path -->
+        <a xlink:href="https://lucialaford.ca/about" target="_blank" rel="noopener noreferrer">
+          <path
+            d="m 1154.582,1329.6878 209.5224,-0.4651 -1.3953,37.2071 -326.027,-0.4651 1.3953,-35.8118 z"
+            fill="rgba(255, 255, 0, 0.4)"
+            stroke="none"
+            filter="url(#soften-edges)"
+            style="opacity: 0; pointer-events: auto; transition: opacity 0.3s;"
+            onmouseover="this.style.opacity='1'"
+            onmouseout="this.style.opacity='0'"
+          />
+        </a>
+      </svg>
+    
+      <!-- Information box -->
+      <div id="info-box" style="color: black;display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(255, 255, 255, 0.9); padding: 15px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.3); z-index: 10;">
+        <p>Underwater life ...</p>
+        <button onclick="toggleInfoBox('info-box')">Close</button>
+      </div>
+
+            <!-- Information box -->
+            <div id="info-box2" style="color: black;display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(255, 255, 255, 0.9); padding: 15px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.3); z-index: 10;">
+              <p>Strawberry (Ode’iminin) - Strawberries are the only fruit that carry their seeds on the outside, to teach us to be vulnerable. 
+                Their leaves grow in clusters of three. They spread from their roots to keep each other company. Just like strawberries, 
+                humans grow better together.</p>
+              <button onclick="toggleInfoBox('info-box2')">Close</button>
+            </div>
+
+            <!-- Information box -->
+                        <div id="info-box3" style="color: black;display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(255, 255, 255, 0.9); padding: 15px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.3); z-index: 10;">
+                          <p>Sun ...</p>
+                          <button onclick="toggleInfoBox('info-box3')">Close</button>
+                        </div>
+            <!-- Information box -->
+            <div id="info-box4" style="color: black;display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(255, 255, 255, 0.9); padding: 15px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.3); z-index: 10;">
+              <p>Four women ...</p>
+              <button onclick="toggleInfoBox('info-box4')">Close</button>
+            </div>
+    </div>               
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function toggleInfoBox(boxId) {
+      const infoBox = document.getElementById(boxId);
+      if (infoBox.style.display === 'none' || infoBox.style.display === '') {
+        infoBox.style.display = 'block';
+      } else {
+        infoBox.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>
