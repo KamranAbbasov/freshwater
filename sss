@@ -1,0 +1,21 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  
+  <!-- Define filters, gradients, clip paths, etc. here -->
+  <defs>
+    <filter id="soften-edges">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" />
+    </filter>
+  </defs>
+
+  <!-- Your shapes go here -->
+  <path id="sun"
+        d="m 637.63624,68.833088 ... z"
+        fill="rgba(255, 255, 0, 0.4)"
+        style="opacity: 0; pointer-events: auto; transition: opacity 0.3s;"
+        onmouseover="this.style.opacity='1'"
+        onmouseout="this.style.opacity='0'"
+        stroke="none"
+        filter="url(#soften-edges)"
+        style="cursor: pointer; transition: fill-opacity 0.3s ease;"
+        onclick="toggleInfoBox('info-box3')" />
+</svg>
